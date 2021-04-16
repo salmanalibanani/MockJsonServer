@@ -1,0 +1,7 @@
+FROM node:alpine    
+EXPOSE 8080
+COPY db.json db.json
+RUN apk update && apk add bash && apk add curl
+RUN yarn global add json-server
+# ENTRYPOINT ["json-server" "db.json", "--port", "8080", "--host", "0.0.0.0"]
+CMD ["json-server", "-H", "0.0.0.0", "db.json", "--port", "8080"]
