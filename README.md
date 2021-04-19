@@ -13,3 +13,7 @@ curl 127.0.0.1:8080/posts/1
 docker exec -it mb1 bash
 
 curl 127.0.0.1:8080/posts/1
+
+# Troubleshooting
+
+Restart docker engine, it works in most cases.
